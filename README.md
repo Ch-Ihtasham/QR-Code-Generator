@@ -1,12 +1,6 @@
 <<<<<<< HEAD
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
+I built a QR Code Generator using React & Tailwind CSS, designed to be fast, responsive, and highly customizable. This project features Dark & Light Mode, allowing users to switch themes effortlessly. It also includes QR code customization options, enabling users to modify colors, sizes, and styles to match their branding. Whether for business, marketing, or personal use, this tool makes generating QR codes simple and efficient.
 # QR-generator
 >>>>>>> 18722885b9de22472a2d2000a2b813ac03ece8c0
