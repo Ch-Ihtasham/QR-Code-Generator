@@ -65,18 +65,18 @@ const QRDisplay = ({ qrValue }) => {
     };
 
     return (
-        <div className="relative flex flex-col justify-center items-center w-50 h-48 bg-white rounded-lg shadow-md border-1 border-white pt-8">
+        <div className="relative flex  flex-col justify-center items-center w-96 h-80 bg-white rounded-lg shadow-md border-[#d1d9e0] border-2 pt-8 dark:bg-[#0D1117]">
             {/* QR Code or Placeholder */}
             {qrValue ? (
                 <div id="qr-code">
                     <ReactQRCode ref={qrRef} value={qrValue} size={100} />
                 </div>
             ) : (
-                <p className="text-gray-500">QR Code will appear here</p>
+                <p className="text-[#25292e] dark:text-white text-lg">QR Code will appear here</p>
             )}
 
             {/* Label at the center of the top border */}
-            <div className="font-semibold border-1 border-gray-300 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-3 text-black whitespace-nowrap">
+            <div className="font-medium dark:font-normal text-xl rounded border-[#d1d9e0] border-2 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-6 py-1 text-[#0969da] whitespace-nowrap dark:bg-[#0D1117]">
                 Your QR Code
             </div>
 
@@ -85,12 +85,12 @@ const QRDisplay = ({ qrValue }) => {
                 <div className="flex gap-2 mt-3">
                     {/* Copy Button */}
                     <button className="p-1" onClick={handleCopy}>
-                        <MdOutlineContentCopy className="text-black w-6 h-6" />
+                        <MdOutlineContentCopy className="text-black w-6 h-6 dark:text-white" />
                     </button>
 
                     {/* Download Button */}
                     <button className="p-1" onClick={handleDownload}>
-                        <MdOutlineFileDownload className="text-black w-6 h-6" />
+                        <MdOutlineFileDownload className="text-black w-6 h-6 dark:text-white" />
                     </button>
                 </div>
             )}

@@ -11,7 +11,7 @@ const QRCustomize = () => {
     // States for QR customization
     const [size, setSize] = useState(150);
     const [bgColor, setBgColor] = useState("#FFFFFF");
-    const [qrColor, setQrColor] = useState("#000000");
+    const [qrColor, setQrColor] = useState("#00000");
     const [errorCorrection, setErrorCorrection] = useState("M");
 
     // Copy QR Code Function
@@ -65,7 +65,7 @@ const QRCustomize = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center p-8 bg-white min-h-screen">
+        <div className="flex flex-col items-center justify-center p-8 bg-white min-h-screen dark:text-white dark:bg-[#0D1117]">
             <h2 className="text-2xl font-semibold mb-4">Customize Your QR Code</h2>
 
             {/* QR Code Display */}
@@ -89,12 +89,12 @@ const QRCustomize = () => {
                 {/* Color Pickers */}
                 <label>
                     QR Color:
-                    <input type="color" value={qrColor} onChange={(e) => setQrColor(e.target.value)} className="ml-2 cursor-pointer" />
+                    <input type="color" value={qrColor} onChange={(e) => setQrColor(e.target.value)} className="ml-2 cursor-pointer " />
                 </label>
 
                 <label>
                     Background Color:
-                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="ml-2 cursor-pointer" />
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="ml-2 cursor-pointer " />
                 </label>
 
                 {/* Error Correction Selector */}
@@ -111,10 +111,10 @@ const QRCustomize = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-4">
-                <button onClick={handleCopy} className="p-2 bg-gray-200 rounded">
+                <button onClick={handleCopy} className="p-2 bg-gray-200 rounded dark:bg-white">
                     <MdOutlineContentCopy className="text-black w-6 h-6" />
                 </button>
-                <button onClick={handleDownload} className="p-2 bg-gray-200 rounded">
+                <button onClick={handleDownload} className="p-2 bg-gray-200 rounded dark:bg-white">
                     <MdOutlineFileDownload className="text-black w-6 h-6" />
                 </button>
             </div>
